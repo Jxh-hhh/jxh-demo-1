@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.div-body{
+    overflow: auto;
+    height:100vh;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    -moz-background-size:100% 100%;
+}
