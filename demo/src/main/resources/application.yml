@@ -2,10 +2,17 @@ spring:
   server:
     port: 8080
   datasource:
+    type: org.apache.commons.dbcp2.BasicDataSource
     url: jdbc:mysql://localhost:3306/jxh-demo-1?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: 1234
+    dbcp2:
+      max-wait-millis: 10000
+      min-idle: 5
+      initial-size: 5
+      connection-properties:
+        characterEncoding: utf8
   mybatis-plus:
     configuration:
       map-underscore-to-camel-case: true
