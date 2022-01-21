@@ -1,2 +1,18 @@
-server:
-  port: 8080
+spring:
+  server:
+    port: 8080
+  datasource:
+    url: jdbc:mysql://localhost:3306/jxh-demo-1?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 1234
+  mybatis-plus:
+    configuration:
+      map-underscore-to-camel-case: true
+      auto-mapping-behavior: full
+      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    mapper-locations: classpath*:mapper/**/*Mapper.xml
+    global-config:
+      db-config:
+        logic-not-delete-value: 1
+        logic-delete-value: 0
