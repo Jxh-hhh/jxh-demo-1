@@ -14,7 +14,7 @@ class DemoApplicationTests {
 
 
     @Autowired
-    UserService userService = new UserServiceImpl();
+    UserService userService;
 
     @Test
     void contextLoads() {
